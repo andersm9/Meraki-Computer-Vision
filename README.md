@@ -52,9 +52,9 @@ key1 = \*\*your\_dash\_API\_key\*\*
 
 //Personal org's network ID that contains cameras
 
-//e.g. network = L\_543212345678917680
-
 network = \*\*your\_NW\_ID\*\*
+
+//e.g. network = L\_543212345678917680
 
 //For MV Sense MQTT
 
@@ -72,7 +72,9 @@ ip = \*\*server\_URL\*\*
 
 //e.g. ip = ec2-54-171-108-161.eu-east-1.compute.amazonaws.com
 
-(the solution is currently designed for a single camera)
+### Notes
+
+The solution is currently designed for a single camera.
 
 The administrator that created your API key needs full access (read-only will not supply a snapshot URL via the API)
 
@@ -80,9 +82,7 @@ You can check the operation of the snapshot API with the following command:
 
 curl -L -H 'X-Cisco-Meraki-API-Key: <api_key>' -X POST 'https://api.meraki.com/api/v0/networks/<Net_ID>/cameras//snapshot'
 
-**                e.g.**
-
-**               **
+e.g.
 
 curl -L -H 'X-Cisco-Meraki-API-Key: 1xbxbb3b5xb2b2b0ab7350d72b0cb7cdd8d9033e' -X POST 'https://api.meraki.com/api/v0/networks/L_176760844512417683/cameras/Q2EV-HYLV-THHY/snapshot'
 
