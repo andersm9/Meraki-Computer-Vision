@@ -202,3 +202,5 @@ $python3 meraki\_cv.py
 # Conclusion
 
 You should now see (in the NodeRed GUI) a graphical readout of luminosity, people counting by Zone, AWS Rekognition emotion/gender/age, object detection, text detection and a snapshot.
+
+![Diagram](Files/Result.png)
