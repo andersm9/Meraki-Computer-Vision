@@ -14,14 +14,11 @@ The high level flow is as follows:
 6. The results are forwarded in MQTT to an MQTT Broker, along with the snapshot URL
 7. The MQTT Broker forwards this (along with the earlier details around People Count and Luminosity) to NodeRED&#39;s Graphical User Interface
 8. The information is presented by NodeRED, including the snapshot image URL
-9. NodeRED requests the image from the Meraki cloud
-10. Meraki cloud returns the snapshot JPEG to NodeRed
-
 
 
 # Dependencies
 
-The solution has been tested against the following module versions:
+The solution has been tested against the following:
 
 * Ubuntu 18.04.2 LTS
 
@@ -49,9 +46,9 @@ The solution has been tested against the following module versions:
 
 //Primary API key for admin account, with access to one or more orgs
 
-// e.g. key1 = 187cd12d3957a98c598cd560d7290c56cd786cd89c
-
 key1 = \*\*your\_dash\_API\_key\*\*
+
+// e.g. key1 = 187cd12d3957a98c598cd560d7290c56cd786cd89c
 
 //Personal org's network ID that contains cameras
 
@@ -87,26 +84,26 @@ curl -L -H 'X-Cisco-Meraki-API-Key: <api_key>' -X POST 'https://api.meraki.com/a
 
 **               **
 
-curl -L -H 'X-Cisco-Meraki-API-Key: 1xbxbb3b5xb2b2b0ab7350d72b0cb7cdd8d9033e' -X POST 'https://api.meraki.com/api/v0/networks/ L_176760844512417683/cameras/Q2EV-HYLV-THHY/snapshot'
+curl -L -H 'X-Cisco-Meraki-API-Key: 1xbxbb3b5xb2b2b0ab7350d72b0cb7cdd8d9033e' -X POST 'https://api.meraki.com/api/v0/networks/L_176760844512417683/cameras/Q2EV-HYLV-THHY/snapshot'
 
 
 ## Dashboard Configuration
 
-###Enable Sense for the camera on the Meraki Dashboard:
+### Enable Sense for the camera on the Meraki Dashboard:
 
   Cameras -  Camera – Settings - Sense - Enable
 
-###Create 2 Zones on your camera, one on the left half of the frame, one on the right half
+### Create 2 Zones on your camera, one on the left half of the frame, one on the right half
 
   Cameras -  Camera – Settings - Zones
 
-###Create and use an MQTT Broker using NodeRed Mosca
+### Create and use an MQTT Broker using NodeRed Mosca
 
   Cameras -  Camera – Settings - Sense - Add or edit MQTT Brokers
 
-  server IP, port 1883, security &quot;None&quot;
+  Your server IP, port 1883, security &quot;None&quot;
 
-* Note your camera’s published topics e.g. /merakimv/Q2SV-HTLN-QFGY/light
+Note your camera’s published topics e.g. /merakimv/Q2SV-HTLN-QFGY/light
 
 ## Node-RED
 
@@ -120,11 +117,11 @@ curl -L -H 'X-Cisco-Meraki-API-Key: 1xbxbb3b5xb2b2b0ab7350d72b0cb7cdd8d9033e' -X
 
         $node-red
 
-3. _optionally_ – use PM2 to start node-red on boot (Ubuntu):
+3. _optionally_ – Use PM2 to start node-red on boot (Ubuntu):
 
         $sudo npm install -g pm2
 
-4. Configure PM2 on Ubuntu:
+4. _optionally_ Configure PM2 on Ubuntu:
 
         $pm2 start /usr/local/bin/node-red -- -v
 
@@ -151,7 +148,7 @@ f) Install NodeRed Dashboard
 
 Start - Manage Palette -  Install -  node-red-dashboard
 
-g) Import the following flow: (start - import - clipboard - select a file to import
+g) Import the following flow: (start - import - clipboard - select a file to import)
 
 [https://github.com/andersm9/Meraki\_NodeRED/blob/master/Flow](https://github.com/andersm9/Meraki_NodeRED/blob/master/Flow)
 
@@ -170,6 +167,10 @@ j) Subscribe to your cameras MQTT topic in NodeRed:
 * “Luminosity Chart” Flow - “mqtt in” node - Topic =
 
 /merakimv/**your-camera-serial**/light
+
+e.g.:
+
+/merakimv/ Q2SV-HTLN-QFGY/light
 
 * “People Count by Zone” flow - “mqtt in” node -
 
