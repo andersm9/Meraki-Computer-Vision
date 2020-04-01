@@ -46,9 +46,9 @@ The solution has been tested against the following:
 
 #Primary API key for admin account, with access to one or more orgs
 
-key1 = \*\*your\_dash\_API\_key\*\*
+key = \*\*your\_dash\_API\_key\*\*
 
-#e.g. key1 = 187cd12d3957a98c598cd560d7290c56cd786cd89c
+#e.g. key = 187cd12d3957a98c598cd560d7290c56cd786cd89c
 
 #Personal org's network ID that contains cameras
 
