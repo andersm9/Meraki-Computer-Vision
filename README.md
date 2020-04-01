@@ -40,37 +40,37 @@ The solution has been tested against the following:
 
 ## Create a file "credentials.ini" with the following contents:
 
-//Meraki dashboard credentials
+#Meraki dashboard credentials
 
 [meraki]
 
-//Primary API key for admin account, with access to one or more orgs
+#Primary API key for admin account, with access to one or more orgs
 
 key1 = \*\*your\_dash\_API\_key\*\*
 
-// e.g. key1 = 187cd12d3957a98c598cd560d7290c56cd786cd89c
+#e.g. key1 = 187cd12d3957a98c598cd560d7290c56cd786cd89c
 
-//Personal org's network ID that contains cameras
+#Personal org's network ID that contains cameras
 
 network = \*\*your\_NW\_ID\*\*
 
-//e.g. network = L\_543212345678917680
+#e.g. network = L\_543212345678917680
 
-//For MV Sense MQTT
+#For MV Sense MQTT
 
 [sense]
 
 serial = \*\*camera\_serial\*\*
 
-//e.g. serial = Q4EV-HXLN-QGGY
+#e.g. serial = Q4EV-HXLN-QGGY
 
-//Server address and port
+#Server address and port
 
 [server]
 
 ip = \*\*server\_URL\*\*
 
-//e.g. ip = ec2-54-171-108-161.eu-east-1.compute.amazonaws.com
+#e.g. ip = ec2-54-171-108-161.eu-east-1.compute.amazonaws.com
 
 ### Notes
 
