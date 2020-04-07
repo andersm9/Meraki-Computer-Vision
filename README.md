@@ -76,6 +76,8 @@ ip = \*\*server\_URL\*\*
 
 ### Notes
 
+The 'credentials.ini' file should reside in the same directory as the 'meraki_cv.py' script
+
 The solution is currently designed for a single camera.
 
 The administrator that created your API key needs full access (read-only will not supply a snapshot URL via the API)
