@@ -40,6 +40,23 @@ The solution has been tested against the following:
 
 # Steps
 
+## Installation
+
+### Create a Virtual Environment:
+virtualenv venv
+
+### Activate the virtual Environment:
+source venv/bin/activate
+
+### Clone the Repo:
+git clone https://github.com/andersm9/Meraki-Computer-Vision
+Cd Meraki-Computer-Vision
+
+### Install the requirements:
+pip3 install -r requirements.txt
+
+Create and configure the 'credentials.ini' file as per the instructions below:
+
 ## Create a file "credentials.ini" with the following contents:
 
 #Meraki dashboard credentials
