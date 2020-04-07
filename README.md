@@ -43,18 +43,18 @@ The solution has been tested against the following:
 ## Installation
 
 ### Create a Virtual Environment:
-    virtualenv venv
+    $virtualenv venv
 
 ### Activate the virtual Environment:
-    source venv/bin/activate
+    $source venv/bin/activate
 
 ### Clone the Repo:
-    git clone https://github.com/andersm9/Meraki-Computer-Vision
+    $git clone https://github.com/andersm9/Meraki-Computer-Vision
 
-    cd Meraki-Computer-Vision
+    $cd Meraki-Computer-Vision
 
 ### Install the requirements:
-    pip3 install -r requirements.txt
+    $pip3 install -r requirements.txt
 
 Create and configure the 'credentials.ini' file as per the instructions below:
 
