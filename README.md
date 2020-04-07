@@ -50,7 +50,8 @@ source venv/bin/activate
 
 ### Clone the Repo:
 git clone https://github.com/andersm9/Meraki-Computer-Vision
-Cd Meraki-Computer-Vision
+
+cd Meraki-Computer-Vision
 
 ### Install the requirements:
 pip3 install -r requirements.txt
